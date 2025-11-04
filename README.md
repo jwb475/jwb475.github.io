@@ -1,2 +1,344 @@
 # jwb475.github.io
 Jack Baek's Data Analyst Portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Baek - Data Analyst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0 100px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 50px;
+            color: #2d3748;
+        }
+
+        .about {
+            background: white;
+            margin-top: -50px;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: #e6e9f7;
+            color: #667eea;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            color: #764ba2;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 8px 0;
+            color: #555;
+        }
+
+        .skill-category li:before {
+            content: "▹ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .contact-info {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .tagline {
+                font-size: 1.1em;
+            }
+            
+            .projects-grid, .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jack Baek</h1>
+            <p class="tagline">Data Analyst | Turning Data Into Insights</p>
+            <div class="social-links">
+                <a href="https://github.com/jwb475" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/jin-wook-baek-jwb475" target="_blank">LinkedIn</a>
+                <a href="mailto:jwb475@nyu.edu">Email</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="about">
+            <p>Hi! I'm a budding data analyst passionate about uncovering insights from data and telling compelling stories through visualization. I love working with Python, SQL, and various data analysis tools to solve real-world problems.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Tech Store Sales Analysis</h3>
+                    <p>Analyzed sales data to identify trends, customer behavior patterns, and revenue drivers. Performed data cleaning, exploratory analysis, and created visualizations to support business decisions.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Data Visualization</span>
+                    </div>
+                    <a href="https://github.com/jwb475/PortfolioProjects" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>HR Analytics Dashboard</h3>
+                    <p>Built an interactive dashboard to visualize key HR metrics including employee turnover, performance ratings, and workforce demographics. Enabled data-driven HR decision making.</p>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Data Modeling</span>
+                    </div>
+                    <a href="https://github.com/jwb475/PortfolioProjects" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Excel Bike Sales Analysis</h3>
+                    <p>Created comprehensive sales analysis using Excel's advanced features. Developed pivot tables, charts, and insights to track bike sales performance across different segments.</p>
+                    <div class="project-tags">
+                        <span class="tag">Excel</span>
+                        <span class="tag">Pivot Tables</span>
+                        <span class="tag">Dashboards</span>
+                    </div>
+                    <a href="https://github.com/jwb475/PortfolioProjects" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Transcripts EDA</h3>
+                    <p>Conducted exploratory data analysis on transcript data to uncover patterns and insights. Applied statistical techniques and visualization methods to understand data distributions and relationships.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">EDA</span>
+                        <span class="tag">Statistical Analysis</span>
+                    </div>
+                    <a href="https://github.com/jwb475/PortfolioProjects" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python (Pandas, NumPy)</li>
+                        <li>SQL</li>
+                        <li>R</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Visualization</h3>
+                    <ul>
+                        <li>Tableau</li>
+                        <li>Power BI</li>
+                        <li>Matplotlib/Seaborn</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Analysis</h3>
+                    <ul>
+                        <li>Statistical Analysis</li>
+                        <li>Data Cleaning</li>
+                        <li>Excel</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Jupyter Notebooks</li>
+                        <li>Git/GitHub</li>
+                        <li>Google Analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <p>Let's connect! Reach me at <a href="mailto:jwb475@nyu.edu">jwb475@nyu.edu</a></p>
+            </div>
+            <p>&copy; 2024 Jack Baek. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
